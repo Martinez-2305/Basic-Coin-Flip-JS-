@@ -1,0 +1,8 @@
+#coin {
+    border-radius: 40px;
+    width: 70px;
+    height: 70px;
+  }
+  #coin:hover {
+    background-color: goldenrod;
+  }
