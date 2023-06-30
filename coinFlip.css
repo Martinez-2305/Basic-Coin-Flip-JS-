@@ -1,8 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
 #coin {
-    border-radius: 40px;
-    width: 70px;
-    height: 70px;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 40%;
+    top: 17%;
   }
   #coin:hover {
     background-color: goldenrod;
+  }
+  #container{
+width:800px;
+height: 500px;
+position: absolute;
+top: 10%;
+left: 30%;
+
+
+
+
+
+  }
+  body{
+    background-color: cyan;
+    font-family: 'Nunito' , sans-serif ;
+  }
+ 
+
+
+  
+  #instructionBox{
+    width: 250px;
+    height: 250px;
+    background-color:lightgray;
+    position: absolute;
+    top: 25%;
+    left: 80%;
+    
+
+  }
+  #heads, #tails, #reset{
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
+    position: absolute;
+    left: 40%;
+    
+  }
+  #tails{
+    position: absolute;
+    top: 50%;
+  }
+  #heads{
+    position: absolute;
+    top: 40%;
+  }
+  #reset{
+    position: absolute;
+    top: 60%;
+  }
+  #title{
+    position: absolute;
+    left: 30%;
+    top: 0%;
+  }
+  #js-guess{
+  position: absolute;
+  top: 70%;
+  left: 39%;
+  }
+  #js-result{
+    position: absolute;
+    top: 77%;
+    left: 39%;
+  }
+  #js-comparison{
+    position: absolute;
+    top: 84%;
+    left: 39%;
   }

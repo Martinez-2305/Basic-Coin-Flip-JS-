@@ -4,22 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coin Flip</title>
-    <link rel="stylesheet" href="coinFlip.css" />
-    <script src="coinFlip.js" defer></script>
+    <link rel="stylesheet" href="coin-flip.css" />
+    <script src="coin-flip.js" defer></script>
   </head>
   <body>
-    <button id="coin">£1</button> <br />
-    <br />
+    <div id="container">
+      <h1 id="title">Simple Coin Flip Game</h1>
+      <button id="coin">£1</button> <br />
+      <br />
 
-    <input type="radio" name="choice" id="heads" />
-    <label for="heads">Heads</label><br />
-    <input type="radio" name="choice" id="tails" />
-    <label for="tails">Tails</label><br /><br />
-
-    <button type="button" id="submit">Submit</button>
-    <br /><br /><br />
-    <p id="js-guess"></p>
-    <p id="js-result"></p>
-    <p id="js-comparison"></p>
+      <button id="heads"> Heads  </button> <br> 
+      <button id="tails"> Tails </button>  <br>
+      <button type="button" id="reset">Reset</button>
+      <br /><br />
+      <p id="js-guess"></p>
+      <p id="js-result"></p>
+      <p id="js-comparison"></p>
+      <p id= "score"></p>
+    
+      <div id="instructionBox"> <p> <ol>
+        <li>Select "Heads" or Tails and press the corresponding button"</li> <br>
+        <li>Click the coin to flip it</li> <br>
+        <li>The results will display underneath</li> <br>
+        <li>To reset press "Reset</li>
+        </ol>  </p> </div>
+    
+    </div>
+    
   </body>
 </html>
