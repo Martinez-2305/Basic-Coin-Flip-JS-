@@ -1,42 +1,37 @@
 const button = document.getElementById("coin");
- let flipGuess;     
-button.onclick = flipCoin 
+const reset = document.getElementById("reset");
+button.onclick = flipCoin
+reset.onclick = resetButton
 
+let result;
+let flipGuess;     
+let flipOutcome1 = 'Heads'
+let flipOutcome2 = 'Tails'
+let flipComparison1 = "Well Done, Correct Guess!"
+let flipComparison2 = "Ooops, Wrong Guess!"
+let flipComparison3 = "Sorry, you haven't confirmed your guess"
+let score = {
+  wins: 0,
+  losses: 0
+}
 
-document.getElementById("submit").onclick = function (){
+ 
+document.getElementById("heads").onclick = function (){
 
-const choiceHeads = document.getElementById("heads");
-const choiceTails = document.getElementById("tails");
-
-
-if (choiceHeads.checked){
-  document.getElementById("js-guess").innerHTML = "You Chose Heads"
-  flipGuess = "Heads"
+document.getElementById("js-guess").innerHTML = "You Chose Heads"
+flipGuess = "Heads"
   
 }
-else if (choiceTails.checked){
-  document.getElementById("js-guess").innerHTML = "You Chose Tails"
-  flipGuess = "Tails"
-}
+document.getElementById("tails").onclick = function (){
 
-
-   
-
-
-
-
-}
-
-
-      let flipOutcome1 = 'Heads'
-      let flipOutcome2 = 'Tails'
-      let flipComparison1 = "Well done, correct guess!"
-      let flipComparison2 = "Ooops, wrong guess!"
-      let flipComparison3 = "Sorry, you haven't confirmed your guess"
-
+    document.getElementById("js-guess").innerHTML = "You Chose Tails"
+    flipGuess = "Tails"
+  
+  }
+      
       function flipCoin() {
      let coinToss = Math.random();
-  let result;
+  
         if (coinToss < 0.5) {
          result = 'Heads' 
           console.log('Heads')
@@ -54,13 +49,25 @@ else if (choiceTails.checked){
 
         if (flipGuess === result){
           document.getElementById("js-comparison").innerHTML = flipComparison1 ;
+          //document.getElementById("score").innerText = `Wins: ${score.wins += 1}`;
         } else if(flipGuess === undefined){document.getElementById("js-comparison").innerHTML = flipComparison3 ;
         
         }else {
           document.getElementById("js-comparison").innerHTML = flipComparison2 ;
+          //document.getElementById("score").innerText = `Losses: ${score.wins += 1}`;
         }
         
         
         return flipCoin;
+      }
+
+      function resetButton(){
+        
+        document.getElementById("js-guess").innerHTML = ""
+        document.getElementById("js-result").innerHTML = ""
+        document.getElementById("js-comparison").innerHTML = ""
+        score.wins = 0;
+        score.losses = 0;
+      
       }
       
